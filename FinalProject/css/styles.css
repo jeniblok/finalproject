@@ -1,0 +1,376 @@
+/*
+Author: Jenn Woldt
+Today's Date: 12/9/24
+File Name: styles.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul, aside, figure, figcaption, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/* Style rules for body and images */
+body {
+    background-color:mediumpurple;
+}
+/* Style rules for navigation area */
+header{
+    background-color: black ;
+}
+#welcome{
+    background-color: rgba(151, 83, 165, 0.795);
+    font-style: italic;
+    font-weight: bolder;
+}
+li{
+    list-style: none;
+}
+a{
+    color: mediumpurple;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-branding{
+    font: 2rem;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: white;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: mediumpurple;
+}
+h1{
+    color: black;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+}
+.upper{
+    color: mediumpurple;
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;   
+}
+#latest{
+    padding: 0% 20%;
+    margin: auto;
+    font-weight: bolder;
+    background-color: rgba(151, 83, 165, 0.795);
+}
+video {
+    max-width: 100%;
+    display: block;
+    padding: 0% 10%; 
+}
+.info{
+    margin: auto;
+    display: block;
+}
+.logo{
+    margin: auto;
+    display: block;
+    
+}
+/* Style rules for mobile viewport */
+
+/* Style rule show mobile class and hide tab-desk class */
+.mobile, .mobile-tablet{
+    display: block;
+}
+
+.tab-desk, .desktop{
+    display: none;
+}
+/* Style rules for main content */
+main {
+    padding: 2% 15%;
+    font-family: 'Lora', serif;
+}
+main p {
+    font-size: 1.25em;
+    padding: 0% 15%;
+}
+main h1{
+    padding: 0% 22%;
+}
+main h2{
+    padding: 0% 15%;
+}
+
+main h3 {
+    padding-top: 2%;
+}
+
+main ul {
+    list-style-type: square;
+}
+.round {
+    border-radius: 6px;
+    padding: 10px 10px;
+    background-color: black;
+    margin: auto;
+}
+#contact, #form h2{
+    text-align: center;
+}
+#questions p{
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: plum;
+}
+#answer{
+    text-align: center;
+    font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50%;
+    background-color: plum;
+}
+#answer h2{
+    display: none;
+    background-color: plum;
+}
+/*Style Rules for form elements*/
+fieldset, input, legend{
+    margin-bottom: 2%;
+}
+p{
+    text-align: center;
+    text-decoration: solid;
+    font-size: medium;
+    font: bold;
+}
+
+label{
+    display: block;
+    padding-top: 2%;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: black;
+    padding: 10px 20px; 
+    margin-top: 10%;
+  }
+  .grid-item {
+    background-color: plum;
+    border: 0.5px solid rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+  }
+  .start{
+    color: mediumpurple;
+    text-align: center;
+    font-size: 4rem;
+    padding: 1px;
+  }
+  .center{
+    width: 70%;
+    margin: auto;
+    display: block;
+  }
+
+#submit, #reset{
+    margin: 0 auto;
+    display: block;
+    padding: 2%;
+    background-color: white;
+    color: rgb(117, 70, 117);
+    font-size: 1.25em;
+    border-radius: 10px;
+}
+/* Style rules for footer content */
+footer {
+    text-align: center;
+    font-size: 0.85em;
+    background-color: rgb(104, 61, 104);
+    color: white;
+    padding: 1% 0;
+}
+
+footer a {
+    color: rgb(117, 70, 117);
+    text-decoration: none;
+}
+/*Mobile viewport*/
+@media(max-width: 768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+    .tab-desk {
+        display: block;
+        padding: 0% 30%;  
+    }
+    .mobile-tablet {
+        display: block;
+    }            
+    /*Tablet Viewport: style rule for form element*/
+    form{
+        width: 70%;
+        margin: 0 auto;
+    }
+    caption{
+        font-size: 1em;
+        font-weight: bold;
+        padding: 1%;
+        color: white;
+    }
+    
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+    
+    /* Desktop Viewport: Show desktop class, hide mobile-tablet class. */
+    nav li {
+        font-size: 1.5em;
+    }
+    nav li a {
+        padding: 0.5em 1.5em;
+    }
+    nav li a:hover {
+        color: rgb(104, 61, 104);
+        background-color: white;
+        opacity: 0.5;
+    }
+    .desktop {
+        display: block;
+    }
+    .mobile-tablet{
+        display: none;
+    }
+    
+    /* Desktop Viewport: Style rules for main content */
+    #info ul {
+        margin-left: 5%;
+    }
+      
+     /*Style rules for table*/
+     table{
+        border: 1px solid rgb(0, 0, 0); 
+        border-collapse: collapse;
+        margin: 0 auto;
+        font-size: 4em;
+        width: auto;
+    }
+    th{
+        border: 10px solid black;
+        padding: 0%;
+        background-color:darkslateblue;
+        color: white;
+        font-size: 40px;      
+    }
+
+    td{
+        border: 10px solid black;
+        padding: 0%;
+        color: white;
+        font-size: 30px;      
+    }
+
+    tr:nth-of-type(odd){
+        background-color: black;
+        color: white;
+    } 
+    /*Desktop Viewport: style rules for form elements*/
+    form{
+        width: auto;
+    }
+    .form-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px;
+    }
+    #btn{
+        grid-column: 1 / span 2;
+    }
+    
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px), print {
+    
+    body {
+        background: linear-gradient(rgb(104, 61, 104), black);
+    }
+    
+    #wrapper {
+        width: 1920px;
+        margin: 0 auto;
+    }
+        
+    main {
+        background-color: rgb(104, 61, 104);
+    }
+    
+}
+
+/* Media Query for Print */
+@media print {
+    
+    body {
+        background-color:rgb(104, 61, 104);
+        color: #000;
+    }
+    
+}

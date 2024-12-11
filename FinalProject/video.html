@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 
+	Student Name: Jenn Woldt
+	File Name: video.html
+	Today's Date: 12/9/24
+ -->
+<html lang="en">
+<head>
+	<title>Lavender Steel Forge</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Emblema+One|Lora&display=swap" rel="stylesheet">
+	
+</head>
+<body>
+    <!-- Mobile Navigation Menu -->
+    <div id="wrapper">   
+        <header>
+            <h1 class="upper">Lavender Steel Forge</h1>
+                <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-branding">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="table.html" class="nav-branding">Classes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="form.html" class="nav-branding">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="video.html" class="nav-branding">From the Forge</a>
+                            </li>
+                        </ul>
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                   </nav>
+              
+              <img src="images/LSF.JPG" class="logo" alt="my Logo" height="300" width="900">
+
+        </header>
+
+        <!-- Use the main area to add the main content to the webpage -->
+        <main>
+            <h1>Just a taste of what it's like in the forge! </h1>
+                
+            <video width="800" controls>
+                <source src="media/Jennblacksmithing.mp4" type="video/mp4" class="info">
+                <p>Your browser does not support the video tag.</p>
+           </video>
+            
+
+           <div id="questions">
+            <p>Click each Question</p>
+            <p onclick="ans1()"> When to start Blacksmithing? </p>
+            <p onclick="ans2()"> What do you need to start Blacksmithing? </p>
+            <p onclick="ans3()"> Where can you find cheap metal? </p>
+            <p onclick="ans4()"> How old is Blacksmithing? </p>
+        </div>
+        <div id="answer">
+        <h2>Answer:</h2>
+        <p></p>
+        </div>
+        </main>
+        <footer>
+            <p>&copy; Copyright 2024. All Rights Reserved.</p>
+        </footer>
+        </div>
+	<script src="scripts/script.js"></script>
+</body>
+</html>
